@@ -2,7 +2,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://docs.cambercloud.com/img/Logo_white.png">
-    <img alt="vLLM" src="https://docs.cambercloud.com/img/Logo_black.png" width=55%>
+    <img alt="vLLM" src="https://docs.cambercloud.com/img/Logo_black.png" width=80%>
   </picture>
 </p>
 
@@ -15,7 +15,7 @@ Remote data science agents for Snowflake, Databricks & BigQuery in Claude/Cursor
 |
 </p>
 
-🔥 We host our MCP server at https://camber-mcp.cambercloud.com/mcp.
+☁️ We host our MCP server at https://camber-mcp.cambercloud.com/mcp.
 
 <!-- Join Slack here -->
 
@@ -35,9 +35,7 @@ The page has three parts: **[Set up Camber MCP](https://docs.cambercloud.com/doc
 
 ## Set up Camber MCP
 
-{{< callout type="info" >}}
-**Heads-up:** To use the full Camber environment through Camber MCP, you need the [Camber CLI](https://docs.cambercloud.com/docs/camber-cli/) on your computer. If you do not have it yet, Camber MCP setup will install the CLI for you. If you are not logged in to Camber, you will need to [log in](https://docs.cambercloud.com/docs/camber-cli/login/) as well (your [API key](https://docs.cambercloud.com/docs/camber-mcp/#get-your-camber-api-key) in the MCP client is for the remote server). See [Installation](https://docs.cambercloud.com/docs/camber-cli/installation/) for details.
-{{< /callout >}}
+> **Heads-up:** To use the full Camber environment through Camber MCP, you need the [Camber CLI](https://docs.cambercloud.com/docs/camber-cli/) on your computer. If you do not have it yet, Camber MCP setup will install the CLI for you. If you are not logged in to Camber, you will need to [log in](https://docs.cambercloud.com/docs/camber-cli/login/) as well (your [API key](https://docs.cambercloud.com/docs/camber-mcp/#get-your-camber-api-key) in the MCP client is for the remote server). See [Installation](https://docs.cambercloud.com/docs/camber-cli/installation/) for details.
 
 ### Get your Camber API key
 
@@ -85,9 +83,7 @@ Replace `<YOUR_CAMBER_API_KEY>` with your token from [Get your Camber API key](h
 
 [Claude Code](https://code.claude.com/docs/en/overview) is Anthropic’s agentic CLI (and related editor flows). Install and sign in per Anthropic’s documentation, then register the Camber server.
 
-{{< callout type="warning" >}}
-**Claude Pro (or eligible plan) required:** Claude Code needs an active **[Claude Pro](https://claude.com/pricing)** subscription or another plan that includes Claude Code. CamberCloud does not replace Anthropic’s requirements.
-{{< /callout >}}
+> **Claude Pro (or eligible plan) required:** Claude Code needs an active **[Claude Pro](https://claude.com/pricing)** subscription or another plan that includes Claude Code. CamberCloud does not replace Anthropic’s requirements.
 
 **Global** (all projects on this machine):
 
@@ -118,7 +114,7 @@ camber @username.agent_alias Your question here
 
 Example: `camber @camberuser.titanic How many passengers?`
 
-![Claude Code terminal: Camber MCP calling the Titanic agent via agents_chat](camber-mcp-titanic-demo.png)
+![Claude Code terminal: Camber MCP calling the Titanic agent via agents_chat](https://docs.cambercloud.com/docs/camber-mcp/camber-mcp-titanic-demo.png)
 
 ### Claude Code for VS Code
 
@@ -160,9 +156,7 @@ camber @username.agent_alias Your question here
 2. Go to the **Tools & MCPs** section.
 3. Select **Add a Custom MCP Server** button.
 
-{{< callout type="info" >}}
-**Tokens and Git:** Do not commit real API keys. Use a placeholder in committed `.cursor/mcp.json` and set your token locally, or rely on a private, gitignored override file if your team uses that pattern.
-{{< /callout >}}
+> **Tokens and Git:** Do not commit real API keys. Use a placeholder in committed `.cursor/mcp.json` and set your token locally, or rely on a private, gitignored override file if your team uses that pattern.
 
 #### Use agents in Cursor
 
@@ -176,7 +170,7 @@ If tools do not appear, confirm the server is enabled in MCP settings, your toke
 
 This section summarizes selected tools exposed by the **`camber-mcp`** server. Your MCP client lists the full tool set and parameters.
 
-### `agents_chat` {#agents_chat}
+### `agents_chat`
 
 Chat with a Camber agent by tag and message. Returns the agent’s reply as text.
 
@@ -188,7 +182,7 @@ Chat with a Camber agent by tag and message. Returns the agent’s reply as text
 
 Use **`agents_chat`** from **Claude Code** (for example via the `camber` CLI pattern shown above) and from **Cursor** when **`camber-mcp`** tools are available in Chat, Composer, or Agent mode.
 
-### `agents_list` {#agents_list}
+### `agents_list`
 
 List [Camber agents](https://docs.cambercloud.com/docs/agents/) you can use, with optional **scope** and **pagination**. Returns agent metadata and page info (for example total count and page size).
 
