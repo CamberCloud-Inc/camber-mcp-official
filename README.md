@@ -29,14 +29,14 @@ Remote data science agents for Snowflake, Databricks & BigQuery in Claude/Cursor
 - Registry modelcontextprotocol: [com.cambercloud.camber-mcp/camber-mcp-server]() -->
 
 
-CamberCloud runs a remote **[Model Context Protocol (MCP)](https://modelcontextprotocol.io/)** server. Register it in your editor or CLI with your Camber API token, then use tools such as **`agents_chat`** to talk to [Camber agents](/docs/agents/) with the same **@mention** tags as in Nova.
+CamberCloud runs a remote **[Model Context Protocol (MCP)](https://modelcontextprotocol.io/)** server. Register it in your editor or CLI with your Camber API token, then use tools such as **`agents_chat`** to talk to [Camber agents](https://docs.cambercloud.com/docs/agents/) with the same **@mention** tags as in Nova.
 
-The page has three parts: **[Set up Camber MCP](#set-up-camber-mcp)** (shared for every client), **[MCP clients](#mcp-clients)** (Claude Code CLI, Claude Code VS Code extension, and Cursor), and **[Camber MCP tools](#camber-mcp-tools)** (technical reference).
+The page has three parts: **[Set up Camber MCP](https://docs.cambercloud.com/docs/camber-mcp/#set-up-camber-mcp)** (shared for every client), **[MCP clients](https://docs.cambercloud.com/docs/camber-mcp/#mcp-clients)** (Claude Code CLI, Claude Code VS Code extension, and Cursor), and **[Camber MCP tools](https://docs.cambercloud.com/docs/camber-mcp/#camber-mcp-tools)** (technical reference).
 
 ## Set up Camber MCP
 
 {{< callout type="info" >}}
-**Heads-up:** To use the full Camber environment through Camber MCP, you need the [Camber CLI](/docs/camber-cli/) on your computer. If you do not have it yet, Camber MCP setup will install the CLI for you. If you are not logged in to Camber, you will need to [log in](/docs/camber-cli/login/) as well (your [API key](#get-your-camber-api-key) in the MCP client is for the remote server). See [Installation](/docs/camber-cli/installation/) for details.
+**Heads-up:** To use the full Camber environment through Camber MCP, you need the [Camber CLI](https://docs.cambercloud.com/docs/camber-cli/) on your computer. If you do not have it yet, Camber MCP setup will install the CLI for you. If you are not logged in to Camber, you will need to [log in](https://docs.cambercloud.com/docs/camber-cli/login/) as well (your [API key](https://docs.cambercloud.com/docs/camber-mcp/#get-your-camber-api-key) in the MCP client is for the remote server). See [Installation](https://docs.cambercloud.com/docs/camber-cli/installation/) for details.
 {{< /callout >}}
 
 ### Get your Camber API key
@@ -47,7 +47,7 @@ The value you pass as `<YOUR_CAMBER_API_KEY>` is your Camber **API token**:
 2. Open your [profile settings](https://app.cambercloud.com/user)
 3. Copy your API token
 
-For using that token with the Camber CLI (environment variable, one-off flags), see [Login — API token](/docs/camber-cli/login#method-2-using-an-api-token-via-environment-variable).
+For using that token with the Camber CLI (environment variable, one-off flags), see [Login — API token](https://docs.cambercloud.com/docs/camber-cli/login#method-2-using-an-api-token-via-environment-variable).
 
 ### Camber MCP server endpoint
 
@@ -75,11 +75,11 @@ Most clients accept a server entry named **`camber-mcp`** with the same fields. 
 }
 ```
 
-Replace `<YOUR_CAMBER_API_KEY>` with your token from [Get your Camber API key](#get-your-camber-api-key).
+Replace `<YOUR_CAMBER_API_KEY>` with your token from [Get your Camber API key](https://docs.cambercloud.com/docs/camber-mcp/#get-your-camber-api-key).
 
 ## MCP clients
 
-**[Claude Code](https://code.claude.com/docs/en/overview)** and **[Cursor](https://cursor.com/)** both connect to the same Camber MCP server. Complete [Set up Camber MCP](#set-up-camber-mcp) first, then follow the subsection for your client. Agent addressing uses the same **@mention** tag formats as in Nova.
+**[Claude Code](https://code.claude.com/docs/en/overview)** and **[Cursor](https://cursor.com/)** both connect to the same Camber MCP server. Complete [Set up Camber MCP](https://docs.cambercloud.com/docs/camber-mcp/#set-up-camber-mcp) first, then follow the subsection for your client. Agent addressing uses the same **@mention** tag formats as in Nova.
 
 ### Claude Code
 
@@ -106,7 +106,7 @@ claude mcp add --transport http camber-mcp \
   --scope project
 ```
 
-Alternatively, add a project **`.mcp.json`** using the [shared MCP JSON](#shared-mcp-json-reference) shape.
+Alternatively, add a project **`.mcp.json`** using the [shared MCP JSON](https://docs.cambercloud.com/docs/camber-mcp/#shared-mcp-json-reference) shape.
 
 #### Use agents in Claude Code
 
@@ -124,7 +124,7 @@ Example: `camber @camberuser.titanic How many passengers?`
 
 If you use Claude Code through the **[VS Code extension](https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code)**, follow these steps:
 
-1. Create a **`.mcp.json`** file in your project root with the [shared MCP JSON](#shared-mcp-json-reference) shape:
+1. Create a **`.mcp.json`** file in your project root with the [shared MCP JSON](https://docs.cambercloud.com/docs/camber-mcp/#shared-mcp-json-reference) shape:
 
 ```json
 {
@@ -190,7 +190,7 @@ Use **`agents_chat`** from **Claude Code** (for example via the `camber` CLI pat
 
 ### `agents_list` {#agents_list}
 
-List [Camber agents](/docs/agents/) you can use, with optional **scope** and **pagination**. Returns agent metadata and page info (for example total count and page size).
+List [Camber agents](https://docs.cambercloud.com/docs/agents/) you can use, with optional **scope** and **pagination**. Returns agent metadata and page info (for example total count and page size).
 
 | Parameter | Description |
 | --- | --- |
