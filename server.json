@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.cambercloud.camber-mcp/camber-mcp-server",
+  "title": "Camber - Remote Agentic Data Science",
+  "description": "Remote data science agents for Snowflake, Databricks & BigQuery in Claude/Cursor via MCP",
+  "version": "1.0.4",
+  "packages": [ ],
+  "websiteUrl": "https://docs.cambercloud.com/docs/camber-mcp",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://camber-mcp.cambercloud.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Get your API key from https://docs.cambercloud.com/docs/camber-mcp/#get-your-camber-api-key",
+          "isRequired": true,
+          "isSecret": true,
+          "value": "Bearer {CAMBER_API_KEY}",
+          "variables": {
+            "CAMBER_API_KEY": {
+              "description": "Your CamberCloud API key.",
+              "isRequired": true,
+              "isSecret": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
