@@ -2,7 +2,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://docs.cambercloud.com/img/Logo_white.png">
-    <img alt="vLLM" src="https://docs.cambercloud.com/img/Logo_black.png" width=80%>
+    <img alt="CamberCloud" src="https://docs.cambercloud.com/img/Logo_black.png" width=80%>
   </picture>
 </p>
 
